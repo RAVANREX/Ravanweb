@@ -1,0 +1,36 @@
+.social-icon-list{
+width: 100%;
+align-items: center;
+text-align: center;
+display: flex;
+flex-direction: row;
+
+
+}
+.social-icon{
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+    border-radius: 120px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(242,245,248,1) 35%, rgba(236,236,237,1) 100%);
+    box-shadow: 0 13px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color .5s, box-shadow .5s, margin-left .5s;
+    font-size: 3.45rem;
+    
+}
+
+.social-icon p{
+    padding: 0;
+}
+@media screen and (max-width:456px) {
+
+    .social-icon-list{
+        flex-direction: column;
+        
+        
+        }
+
+}

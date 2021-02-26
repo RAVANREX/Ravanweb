@@ -1,0 +1,13 @@
+.project-text{
+    font-size: 15px;
+    padding-left: 20px;
+    color: #768CA4;
+    font-family: 'Roboto', sans-serif;
+    height: 50px;
+    overflow: hidden;
+    
+  }
+.project-text-style{
+  height: 400px;
+  overflow-y: scroll;
+}

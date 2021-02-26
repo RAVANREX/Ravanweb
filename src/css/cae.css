@@ -1,0 +1,67 @@
+.cavnav{
+    width: 100%;
+}
+
+.caenavmenu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    height: 65px;
+    width: auto;
+    align-items: center;
+  
+    
+}
+.caenavmenu li{
+    width: auto;
+    height: 65px;
+    padding: 0px;
+    padding-right: 3rem;
+}
+
+.caenavmenu li a{
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.cae-active{
+    font-weight: 900;
+    text-decoration: overline;
+    background-color: rgba(10, 216, 41, 0.211);
+
+}
+
+.caeview{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;  
+}
+
+@media screen and (max-width:768px) {
+
+    .caenavmenu{
+        flex-direction: column;
+        height: 65px;
+        width: auto;
+        align-items: center;
+    }
+.caenavmenu li{
+    width: auto;
+    height: 40px;
+    padding: 0px;
+    padding-right: 2.4rem;
+}
+    .caeview{
+        margin-top: 120px;
+        width: 100%;
+        
+    }
+
+
+
+}

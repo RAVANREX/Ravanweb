@@ -1,0 +1,5 @@
+.adminlogin form input{
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+    }
