@@ -1,11 +1,21 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import '../css/home.css';
 import {Image} from 'react-bootstrap';
+import Userfet from '../apis/Userfet';
 
 
 
 
-function home(){
+function Home(){
+  const [userNameList,setuserList]= useState([]);
+  useEffect(()=>{
+    Userfet.get("/").then((response)=>{
+     console.log(response.data.rows)
+    setuserList(response.data.rows)
+   })
+  },[])
+
+
     return(
         <>
       
@@ -13,12 +23,11 @@ function home(){
         <Image className="profileimg" src={process.env.PUBLIC_URL + "/assets/test.jpg"} alt="Italian Trulli" style={{borderRadius:150}}/>
         <p className="profilename">SUMAN SAHA</p>
 
-        <div className="mycard" style={{height:"75px"}}>
+        <div className="mycard" style={{height:"250px"}}>
             <h5>Bio</h5>
-            <p>SUMAN SAHASUMAN sumansdaha<br/>
-            SUMAN SAHASUMAN sumansdaha<br/>
-            SUMAN SAHASUMAN sumansdaha<br/>
-            SUMAN SAHASUMAN sumansdaha<br/></p>
+            {userNameList.map((values)=>{
+              return( <React.Fragment key={values.user_id}><p>username :{values.username} password:{values.password}</p></React.Fragment>)
+            })}
         </div>
         <div className="mycard" style={{height:"130px"}}>
             <h5>About</h5>
@@ -95,4 +104,4 @@ function home(){
     );
 }
 
-export default home;
+export default Home;

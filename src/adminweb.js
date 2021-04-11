@@ -24,8 +24,8 @@ function Adminweb()  {
         <Switch>
         </Switch>
         <div>
-        <Route path='/admin' exact component={Adminlogin}/>
-        <Route path='/admin/login' exact component={Adminlogin}/>
+        <Route path='/admin/' exact component={Adminlogin}/>
+        <Route path='/admin/login'  component={Adminlogin}/>
         <Route path='/admin/user' exact component={Adminuser}/>
         <Route path='/admin/blog' exact component={Adminblog}/>
         <Route path='/admin/skill' exact component={Adminskill}/>
